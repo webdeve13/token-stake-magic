@@ -53,11 +53,15 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         staking: {
-          background: "#0F172A",
-          card: "#1E293B",
-          accent: "#06B6D4",
-          success: "#10B981",
-          error: "#EF4444",
+          background: "#1A1F2C",
+          card: "#252B3B",
+          accent: "#9b87f5",
+          success: "#7E69AB",
+          error: "#D946EF",
+          text: {
+            primary: "#FFFFFF",
+            secondary: "#94A3B8",
+          }
         },
       },
       borderRadius: {

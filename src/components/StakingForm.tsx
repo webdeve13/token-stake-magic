@@ -26,32 +26,34 @@ export const StakingForm = () => {
   };
 
   return (
-    <Card className="bg-staking-card p-6 rounded-xl border-0">
-      <div className="flex items-center gap-2 mb-4">
-        <Link2 className="w-5 h-5 text-staking-accent" />
-        <h2 className="text-white text-xl font-semibold">Stake Tokens</h2>
+    <Card className="bg-staking-card p-8 rounded-xl border-0 hover:shadow-lg hover:shadow-staking-accent/10 transition-all duration-300">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="p-2 bg-staking-accent/10 rounded-lg">
+          <Link2 className="w-6 h-6 text-staking-accent" />
+        </div>
+        <h2 className="text-staking-text-primary text-xl font-semibold">Stake Tokens</h2>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div>
-          <label className="text-gray-400 text-sm block mb-2">Amount</label>
+          <label className="text-staking-text-secondary text-sm block mb-2">Amount</label>
           <Input
             placeholder="Enter amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            className="bg-staking-background border-gray-700 text-white"
+            className="bg-staking-background border-staking-card text-staking-text-primary placeholder:text-staking-text-secondary/50"
           />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <Button
             onClick={handleStake}
-            className="bg-staking-accent hover:bg-staking-accent/90 text-white"
+            className="bg-staking-accent hover:bg-staking-accent/90 text-white shadow-lg shadow-staking-accent/20"
           >
             Stake
           </Button>
           <Button
             onClick={handleUnstake}
             variant="outline"
-            className="border-gray-700 text-white hover:bg-gray-700"
+            className="border-staking-card text-staking-text-primary hover:bg-staking-card/50"
           >
             Unstake
           </Button>

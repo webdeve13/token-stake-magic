@@ -12,35 +12,35 @@ const data = [
 
 export const RewardsChart = () => {
   return (
-    <Card className="bg-staking-card p-6 rounded-xl border-0">
-      <h2 className="text-white text-xl font-semibold mb-4">Rewards History</h2>
+    <Card className="bg-staking-card p-8 rounded-xl border-0 hover:shadow-lg hover:shadow-staking-accent/10 transition-all duration-300">
+      <h2 className="text-staking-text-primary text-xl font-semibold mb-6">Rewards History</h2>
       <div className="h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
             <XAxis
               dataKey="month"
-              stroke="#64748B"
+              stroke="#94A3B8"
               tickLine={false}
               axisLine={false}
             />
             <YAxis
-              stroke="#64748B"
+              stroke="#94A3B8"
               tickLine={false}
               axisLine={false}
               tickFormatter={(value) => `${value}`}
             />
             <Tooltip
               contentStyle={{
-                backgroundColor: "#1E293B",
+                backgroundColor: "#252B3B",
                 border: "none",
                 borderRadius: "8px",
-                color: "white",
+                color: "#FFFFFF",
               }}
             />
             <Line
               type="monotone"
               dataKey="rewards"
-              stroke="#06B6D4"
+              stroke="#9b87f5"
               strokeWidth={2}
               dot={false}
             />
